@@ -1,0 +1,21 @@
+{
+    "original_shape": [
+        9564,
+        49
+    ],
+    "final_shape": [
+        9564,
+        44
+    ],
+    "features_created": -5,
+    "train_size": 11616,
+    "test_size": 1913,
+    "n_features": 42,
+    "target_classes": [
+        "CANDIDATE",
+        "CONFIRMED",
+        "FALSE POSITIVE"
+    ],
+    "imbalance_ratio_before": 2.053022269353128,
+    "smote_applied": true
+}

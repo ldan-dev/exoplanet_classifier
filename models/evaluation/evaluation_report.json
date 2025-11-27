@@ -1,0 +1,96 @@
+{
+    "timestamp": "2025-10-30T17:45:30.568712",
+    "model_name": "Gradient Boosting (XGBoost)",
+    "model_type": "XGBClassifier",
+    "test_set_size": 1913,
+    "metrics": {
+        "accuracy": 0.9153162571876634,
+        "balanced_accuracy": 0.885663862685551,
+        "precision_macro": 0.8866166350192467,
+        "recall_macro": 0.885663862685551,
+        "f1_macro": 0.8858639318452824,
+        "cohen_kappa": 0.8637760255721604,
+        "matthews_corrcoef": 0.8639448264806558
+    },
+    "metrics_per_class": {
+        "CANDIDATE": {
+            "precision": 0.8178137651821862,
+            "recall": 0.8523206751054853,
+            "f1-score": 0.8347107438016529,
+            "support": 474
+        },
+        "CONFIRMED": {
+            "precision": 0.844097995545657,
+            "recall": 0.8046709129511678,
+            "f1-score": 0.8239130434782609,
+            "support": 471
+        },
+        "FALSE POSITIVE": {
+            "precision": 0.9979381443298969,
+            "recall": 1.0,
+            "f1-score": 0.9989680082559339,
+            "support": 968
+        }
+    },
+    "roc_auc_per_class": {
+        "CANDIDATE": 0.9723700530431647,
+        "CONFIRMED": 0.9712389315382328,
+        "FALSE POSITIVE": 0.9999661113297478
+    },
+    "roc_auc_macro": 0.9811916986370485,
+    "confidence_analysis": {
+        "mean": 0.9376803040504456,
+        "std": 0.11391108483076096,
+        "min": 0.49794360995292664,
+        "max": 0.9997381567955017,
+        "low_confidence_pct": 3.0318870883429168
+    },
+    "robustness": {
+        "cross_validation": {
+            "mean_f1": 0.932703858844466,
+            "std_f1": 0.002819808817077555,
+            "scores": [
+                0.9284443719152594,
+                0.9332530231310251,
+                0.9354325063358676,
+                0.9306077640352933,
+                0.9357816288048846
+            ]
+        },
+        "overfitting": {
+            "train_f1": 0.9743365101712538,
+            "test_f1": 0.8858639318452824,
+            "gap": 0.08847257832597133
+        },
+        "noise_tests": [
+            {
+                "noise_level": 0.01,
+                "accuracy": 0.7109252483010977,
+                "f1_score": 0.6360482158655003,
+                "acc_drop": 0.2043910088865657,
+                "f1_drop": 0.24981571597978214
+            },
+            {
+                "noise_level": 0.05,
+                "accuracy": 0.6853110297961317,
+                "f1_score": 0.5912074280792575,
+                "acc_drop": 0.23000522739153173,
+                "f1_drop": 0.2946565037660249
+            },
+            {
+                "noise_level": 0.1,
+                "accuracy": 0.680083638264506,
+                "f1_score": 0.5782515558057354,
+                "acc_drop": 0.2352326189231574,
+                "f1_drop": 0.30761237603954705
+            }
+        ]
+    },
+    "acceptance_criteria": {
+        "f1_threshold_0.85": true,
+        "accuracy_threshold_0.90": true,
+        "auc_threshold_0.90": true,
+        "cv_stability": true,
+        "overfitting_check": false
+    }
+}
